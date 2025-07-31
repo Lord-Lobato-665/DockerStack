@@ -20,7 +20,6 @@ pids
 coverage/
 
 # Build outputs
-dist/
 build/
 
 # DB local
