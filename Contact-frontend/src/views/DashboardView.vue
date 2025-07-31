@@ -110,8 +110,8 @@ const fetchData = async () => {
     const config = { headers: { Authorization: `Bearer ${token}` } }
 
     const [userRes, contactRes] = await Promise.all([
-      axios.get('http://localhost:4000/api/auth/users', config),
-      axios.get('http://localhost:4000/api/contact', config)
+      axios.get('https://3159.efdiaz.xyz/api/auth/users', config),
+      axios.get('https://3159.efdiaz.xyz/api/contact', config)
     ])
 
     users.value = userRes.data
@@ -157,7 +157,7 @@ const registerUser = async () => {
   if (!validateInputs()) return
 
   try {
-    await axios.post('http://localhost:4000/api/auth/register', newUser.value)
+    await axios.post('https://3159.efdiaz.xyz/api/auth/register', newUser.value)
     await fetchData()
     closeModal()
   } catch (err) {

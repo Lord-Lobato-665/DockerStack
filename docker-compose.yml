@@ -12,7 +12,7 @@ services:
   landing:
     build: ./Contact-frontend
     ports:
-      - "3000:80"
+      - "3182:80"
     networks:
       - app-net
 

@@ -342,7 +342,7 @@ const submitForm = handleSubmit(async (values) => {
       throw new Error('Debes verificar que no eres un robot antes de continuar.')
     }
 
-    const response = await axios.post('http://localhost:4000/api/contact', {
+    const response = await axios.post('https://3159.efdiaz.xyz/api/contact', {
       ...values,
       recaptchaToken: recaptchaToken.value,
       acceptedTerms: acceptedTerms.value,
